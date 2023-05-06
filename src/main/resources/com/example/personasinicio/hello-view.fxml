@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -11,12 +12,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="258.0" prefWidth="460.0" style="-fx-background-color: #C0FFBD;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personasinicio.FormularioPersonasController">
+<VBox alignment="CENTER" prefHeight="258.0" prefWidth="460.0" style="-fx-background-color: #F9E9FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personasinicio.controllers.FormularioPersonasController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Label text="PERSONAS" textFill="#407a3d">
+      <Label text="PERSONAS" textFill="#72009c">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -35,27 +36,28 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Nombre" textFill="#407a3d">
+            <Label text="Nombre" textFill="#72009c">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <Label text="Edad" textFill="#407a3d" GridPane.rowIndex="1">
+            <Label text="Edad" textFill="#72009c" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <Label text="Correo" textFill="#407a3d" GridPane.rowIndex="2">
+            <Label text="Correo" textFill="#72009c" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="nombreField" style="-fx-background-color: #D5FFD3;" GridPane.columnIndex="1" />
-            <TextField fx:id="edadField" prefHeight="26.0" prefWidth="362.0" style="-fx-background-color: #D5FFD3;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="correoField" style="-fx-background-color: #D5FFD3;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="nombreField" onAction="#onNombrePuesto" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" />
+            <TextField fx:id="edadField" onAction="#onEdadPuesta" prefHeight="26.0" prefWidth="362.0" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="correoField" onAction="#onCorreoPuesto" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="286.0" spacing="40.0">
          <children>
-            <Button fx:id="botonBorrar" mnemonicParsing="false" style="-fx-background-color: #E17979;" text="Borrar" textFill="#2a4a2c" />
-            <Button fx:id="botonGuardar" mnemonicParsing="false" style="-fx-background-color: #6ADE65;" text="Guardar" />
+            <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-accent: purple; -fx-control-inner-background: #F9E9FF;" />
+            <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBorrarButtonClick" style="-fx-background-color: #E17979;" text="Borrar" />
+            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" style="-fx-background-color: #6ADE65;" text="Guardar" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />

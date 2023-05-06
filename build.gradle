@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.6.20'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
     id 'org.openjfx.javafxplugin' version '0.0.13'
     id 'org.beryx.jlink' version '2.25.0'
 }
@@ -14,7 +14,7 @@ repositories {
 }
 
 ext {
-    junitVersion = '5.8.2'
+    junitVersion = '5.9.2'
 }
 
 sourceCompatibility = '17'
@@ -31,7 +31,7 @@ application {
 
 [compileKotlin, compileTestKotlin].forEach {
     it.kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
     }
 }
 
@@ -42,8 +42,12 @@ javafx {
 
 dependencies {
 
+    implementation ("com.michael-bull.kotlin-result:kotlin-result:1.1.16")
+    implementation("ch.qos.logback:logback-classic:1.4.5")
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 }
 
 test {
