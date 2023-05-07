@@ -92,9 +92,9 @@ class FormularioPersonasController() {
     private fun onNombrePuesto() {
         logger.debug { "Controller -> Nombre introducido: ${nombreField.text}" }
         val nombreRegex = Regex("^[a-zA-Z ]+$")
-        if (nombreField.text.matches(nombreRegex)) {
-            nombreField.style = "-fx-background-color: #CCFFBC;"
-        } else nombreField.style = "-fx-background-color: #FFBCBC;"
+        if (nombreField.text == "") { nombreField.style = "-fx-background-color: #EEC2FF;" }
+        else if (nombreField.text.matches(nombreRegex)) { nombreField.style = "-fx-background-color: #CCFFBC;" }
+        else nombreField.style = "-fx-background-color: #FFBCBC;"
         comprobarCampos()
     }
 
@@ -102,9 +102,9 @@ class FormularioPersonasController() {
     private fun onEdadPuesta() {
         logger.debug { "Controller -> Edad introducida: ${edadField.text}" }
         val edadRegex = Regex("^\\d+$")
-        if (edadField.text.matches(edadRegex)) {
-            edadField.style = "-fx-background-color: #CCFFBC;"
-        } else edadField.style = "-fx-background-color: #FFBCBC;"
+        if (edadField.text == "") { edadField.style = "-fx-background-color: #EEC2FF;" }
+        else if (edadField.text.matches(edadRegex)) { edadField.style = "-fx-background-color: #CCFFBC;" }
+        else edadField.style = "-fx-background-color: #FFBCBC;"
         comprobarCampos()
     }
 
@@ -112,9 +112,9 @@ class FormularioPersonasController() {
     private fun onCorreoPuesto() {
         logger.debug { "Controller -> Correo introducido: ${correoField.text}" }
         val correoRegex = Regex("^[\\w.]+@\\w+(.es|.com|.org)$")
-        if (correoField.text.matches(correoRegex)) {
-            correoField.style = "-fx-background-color: #CCFFBC;"
-        } else correoField.style = "-fx-background-color: #FFBCBC;"
+        if (correoField.text == "") { correoField.style = "-fx-background-color: #EEC2FF;" }
+        else if (correoField.text.matches(correoRegex)) { correoField.style = "-fx-background-color: #CCFFBC;" }
+        else correoField.style = "-fx-background-color: #FFBCBC;"
         comprobarCampos()
     }
 

@@ -48,9 +48,9 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="nombreField" onAction="#onNombrePuesto" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" />
-            <TextField fx:id="edadField" onAction="#onEdadPuesta" prefHeight="26.0" prefWidth="362.0" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="correoField" onAction="#onCorreoPuesto" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="nombreField" onKeyReleased="#onNombrePuesto" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" />
+            <TextField fx:id="edadField" onKeyReleased="#onEdadPuesta" prefHeight="26.0" prefWidth="362.0" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="correoField" onKeyReleased="#onCorreoPuesto" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="286.0" spacing="40.0">
