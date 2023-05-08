@@ -33,6 +33,9 @@ class FormularioPersonasController() {
     private lateinit var botonGuardar: Button
 
     @FXML
+    private lateinit var botonVer: Button
+
+    @FXML
     private lateinit var progressBar: ProgressBar
 
     private val repository = PersonasRepository()
@@ -41,6 +44,7 @@ class FormularioPersonasController() {
     private fun initialize() {
         botonGuardar.isDisable = true
         botonBorrar.isDisable = true
+        botonVer.isDisable = true
     }
 
     @FXML
@@ -52,9 +56,7 @@ class FormularioPersonasController() {
         edadField.style = "-fx-background-color: #EEC2FF;"
         correoField.text = ""
         correoField.style = "-fx-background-color: #EEC2FF;"
-        progressBar.progress = 0.0
-        botonGuardar.isDisable = true
-        botonBorrar.isDisable = true
+        comprobarCampos()
     }
 
     @FXML
@@ -89,9 +91,14 @@ class FormularioPersonasController() {
     }
 
     @FXML
-    private fun onNombrePuesto() {
+    private fun onVerBotonClick() {
+
+    }
+
+    @FXML
+    private fun onModificarNombre() {
         logger.debug { "Controller -> Nombre introducido: ${nombreField.text}" }
-        val nombreRegex = Regex("^[a-zA-Z ]+$")
+        val nombreRegex = Regex("^([a-zA-Z]+ *)+")
         if (nombreField.text == "") { nombreField.style = "-fx-background-color: #EEC2FF;" }
         else if (nombreField.text.matches(nombreRegex)) { nombreField.style = "-fx-background-color: #CCFFBC;" }
         else nombreField.style = "-fx-background-color: #FFBCBC;"
@@ -99,7 +106,7 @@ class FormularioPersonasController() {
     }
 
     @FXML
-    private fun onEdadPuesta() {
+    private fun onModificarEdad() {
         logger.debug { "Controller -> Edad introducida: ${edadField.text}" }
         val edadRegex = Regex("^\\d+$")
         if (edadField.text == "") { edadField.style = "-fx-background-color: #EEC2FF;" }
@@ -109,13 +116,43 @@ class FormularioPersonasController() {
     }
 
     @FXML
-    private fun onCorreoPuesto() {
+    private fun onModificarCorreo() {
         logger.debug { "Controller -> Correo introducido: ${correoField.text}" }
         val correoRegex = Regex("^[\\w.]+@\\w+(.es|.com|.org)$")
         if (correoField.text == "") { correoField.style = "-fx-background-color: #EEC2FF;" }
         else if (correoField.text.matches(correoRegex)) { correoField.style = "-fx-background-color: #CCFFBC;" }
         else correoField.style = "-fx-background-color: #FFBCBC;"
         comprobarCampos()
+    }
+
+    @FXML
+    private fun onRatonEncimaBorrar() {
+        botonBorrar.style = "-fx-background-color: #FF4747;"
+    }
+
+    @FXML
+    private fun onRatonQuitadoBorrar() {
+        botonBorrar.style = "-fx-background-color: #FF9E9E;"
+    }
+
+    @FXML
+    private fun onRatonEncimaGuardar() {
+        botonGuardar.style = "-fx-background-color: #6FFF4B;"
+    }
+
+    @FXML
+    private fun onRatonQuitadoGuardar() {
+        botonGuardar.style = "-fx-background-color: #AAFF9E;"
+    }
+
+    @FXML
+    private fun onRatonEncimaVer() {
+        botonVer.style = "-fx-background-color: #62B8FF;"
+    }
+
+    @FXML
+    private fun onRatonQuitadoVer() {
+        botonVer.style = "-fx-background-color: #99D1FF;"
     }
 
     private fun comprobarCampos() {
@@ -132,12 +169,12 @@ class FormularioPersonasController() {
                 botonBorrar.isDisable = true
             }
             1 -> {
-                progressBar.progress = 0.3
+                progressBar.progress = 0.33
                 botonGuardar.isDisable = true
                 botonBorrar.isDisable = false
             }
             2 -> {
-                progressBar.progress = 0.6
+                progressBar.progress = 0.66
                 botonGuardar.isDisable = true
                 botonBorrar.isDisable = false
             }
