@@ -44,7 +44,6 @@ class FormularioPersonasController() {
     private fun initialize() {
         botonGuardar.isDisable = true
         botonBorrar.isDisable = true
-        botonVer.isDisable = true
     }
 
     @FXML
