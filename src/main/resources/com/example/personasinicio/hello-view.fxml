@@ -75,7 +75,7 @@
          <children>
             <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-accent: #F285FF; -fx-control-inner-background: #F9E9FF;" />
             <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBorrarButtonClick" onMouseEntered="#onRatonEncimaBorrar" onMouseExited="#onRatonQuitadoBorrar" style="-fx-background-color: #FF9E9E;" text="Borrar" />
-            <Button fx:id="botonVer" mnemonicParsing="false" onAction="#onVerBotonClick" onMouseEntered="#onRatonEncimaVer" onMouseExited="#onRatonQuitadoVer" style="-fx-background-color: #99D1FF;" text="Datos" />
+            <Button fx:id="botonDatos" mnemonicParsing="false" onAction="#onDatosBotonClick" onMouseEntered="#onRatonEncimaDatos" onMouseExited="#onRatonQuitadoDatos" style="-fx-background-color: #99D1FF;" text="Datos" />
             <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #AAFF9E;" text="Guardar" />
          </children>
          <VBox.margin>

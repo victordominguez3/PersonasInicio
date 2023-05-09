@@ -33,7 +33,7 @@ class FormularioPersonasController() {
     private lateinit var botonGuardar: Button
 
     @FXML
-    private lateinit var botonVer: Button
+    private lateinit var botonDatos: Button
 
     @FXML
     private lateinit var progressBar: ProgressBar
@@ -90,7 +90,7 @@ class FormularioPersonasController() {
     }
 
     @FXML
-    private fun onVerBotonClick() {
+    private fun onDatosBotonClick() {
 
     }
 
@@ -145,13 +145,13 @@ class FormularioPersonasController() {
     }
 
     @FXML
-    private fun onRatonEncimaVer() {
-        botonVer.style = "-fx-background-color: #62B8FF;"
+    private fun onRatonEncimaDatos() {
+        botonDatos.style = "-fx-background-color: #62B8FF;"
     }
 
     @FXML
-    private fun onRatonQuitadoVer() {
-        botonVer.style = "-fx-background-color: #99D1FF;"
+    private fun onRatonQuitadoDatos() {
+        botonDatos.style = "-fx-background-color: #99D1FF;"
     }
 
     private fun comprobarCampos() {
