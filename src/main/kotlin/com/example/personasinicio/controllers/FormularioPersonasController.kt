@@ -3,6 +3,7 @@ package com.example.personasinicio.controllers
 import com.example.personasinicio.mappers.toPersona
 import com.example.personasinicio.models.PersonaDto
 import com.example.personasinicio.repositories.PersonasRepository
+import com.example.personasinicio.routes.RoutesManager.initDatosStage
 import com.example.personasinicio.validators.validar
 import com.github.michaelbull.result.getOrElse
 import com.github.michaelbull.result.onSuccess
@@ -39,6 +40,17 @@ class FormularioPersonasController() {
     private lateinit var progressBar: ProgressBar
 
     private val repository = PersonasRepository()
+    private val estilos: Map<String, String> = mapOf(
+        "fondoMoradoCampos" to "-fx-background-color: #EEC2FF; -fx-background-radius: 20;",
+        "fondoRojoCampos" to "-fx-background-color: #FFBCBC; -fx-background-radius: 20;",
+        "fondoVerdeCampos" to "-fx-background-color: #CCFFBC; -fx-background-radius: 20;",
+        "botonBorrarClaro" to "-fx-background-color: #FF9E9E; -fx-background-radius: 10;",
+        "botonBorrarOscuro" to "-fx-background-color: #FF4747; -fx-background-radius: 10;",
+        "botonDatosClaro" to "-fx-background-color: #99D1FF; -fx-background-radius: 10;",
+        "botonDatosOscuro" to "-fx-background-color: #62B8FF; -fx-background-radius: 10;",
+        "botonGuardarClaro" to "-fx-background-color: #AAFF9E; -fx-background-radius: 10;",
+        "botonGuardarOscuro" to "-fx-background-color: #6FFF4B; -fx-background-radius: 10;",
+    )
 
     @FXML
     private fun initialize() {
@@ -50,11 +62,11 @@ class FormularioPersonasController() {
     private fun onBorrarButtonClick() {
         logger.debug { "Controller -> Botón BORRAR" }
         nombreField.text = ""
-        nombreField.style = "-fx-background-color: #EEC2FF;"
+        nombreField.style = estilos["fondoMoradoCampos"]
         edadField.text = ""
-        edadField.style = "-fx-background-color: #EEC2FF;"
+        edadField.style = estilos["fondoMoradoCampos"]
         correoField.text = ""
-        correoField.style = "-fx-background-color: #EEC2FF;"
+        correoField.style = estilos["fondoMoradoCampos"]
         comprobarCampos()
     }
 
@@ -91,16 +103,17 @@ class FormularioPersonasController() {
 
     @FXML
     private fun onDatosBotonClick() {
-
+        val datos = arrayOf(nombreField.text, edadField.text, correoField.text)
+        initDatosStage(datos)
     }
 
     @FXML
     private fun onModificarNombre() {
         logger.debug { "Controller -> Nombre introducido: ${nombreField.text}" }
         val nombreRegex = Regex("^([a-zA-Z]+ *)+")
-        if (nombreField.text == "") { nombreField.style = "-fx-background-color: #EEC2FF;" }
-        else if (nombreField.text.matches(nombreRegex)) { nombreField.style = "-fx-background-color: #CCFFBC;" }
-        else nombreField.style = "-fx-background-color: #FFBCBC;"
+        if (nombreField.text == "") { nombreField.style = estilos["fondoMoradoCampos"] }
+        else if (nombreField.text.matches(nombreRegex)) { nombreField.style = estilos["fondoVerdeCampos"] }
+        else nombreField.style = estilos["fondoRojoCampos"]
         comprobarCampos()
     }
 
@@ -108,9 +121,9 @@ class FormularioPersonasController() {
     private fun onModificarEdad() {
         logger.debug { "Controller -> Edad introducida: ${edadField.text}" }
         val edadRegex = Regex("^\\d+$")
-        if (edadField.text == "") { edadField.style = "-fx-background-color: #EEC2FF;" }
-        else if (edadField.text.matches(edadRegex)) { edadField.style = "-fx-background-color: #CCFFBC;" }
-        else edadField.style = "-fx-background-color: #FFBCBC;"
+        if (edadField.text == "") { edadField.style = estilos["fondoMoradoCampos"] }
+        else if (edadField.text.matches(edadRegex)) { edadField.style = estilos["fondoVerdeCampos"] }
+        else edadField.style = estilos["fondoRojoCampos"]
         comprobarCampos()
     }
 
@@ -118,40 +131,40 @@ class FormularioPersonasController() {
     private fun onModificarCorreo() {
         logger.debug { "Controller -> Correo introducido: ${correoField.text}" }
         val correoRegex = Regex("^[\\w.]+@\\w+(.es|.com|.org)$")
-        if (correoField.text == "") { correoField.style = "-fx-background-color: #EEC2FF;" }
-        else if (correoField.text.matches(correoRegex)) { correoField.style = "-fx-background-color: #CCFFBC;" }
-        else correoField.style = "-fx-background-color: #FFBCBC;"
+        if (correoField.text == "") { correoField.style = estilos["fondoMoradoCampos"] }
+        else if (correoField.text.matches(correoRegex)) { correoField.style = estilos["fondoVerdeCampos"] }
+        else correoField.style = estilos["fondoRojoCampos"]
         comprobarCampos()
     }
 
     @FXML
     private fun onRatonEncimaBorrar() {
-        botonBorrar.style = "-fx-background-color: #FF4747;"
+        botonBorrar.style = estilos["botonBorrarOscuro"]
     }
 
     @FXML
     private fun onRatonQuitadoBorrar() {
-        botonBorrar.style = "-fx-background-color: #FF9E9E;"
+        botonBorrar.style = estilos["botonBorrarClaro"]
     }
 
     @FXML
     private fun onRatonEncimaGuardar() {
-        botonGuardar.style = "-fx-background-color: #6FFF4B;"
+        botonGuardar.style = estilos["botonGuardarOscuro"]
     }
 
     @FXML
     private fun onRatonQuitadoGuardar() {
-        botonGuardar.style = "-fx-background-color: #AAFF9E;"
+        botonGuardar.style = estilos["botonGuardarClaro"]
     }
 
     @FXML
     private fun onRatonEncimaDatos() {
-        botonDatos.style = "-fx-background-color: #62B8FF;"
+        botonDatos.style = estilos["botonDatosOscuro"]
     }
 
     @FXML
     private fun onRatonQuitadoDatos() {
-        botonDatos.style = "-fx-background-color: #99D1FF;"
+        botonDatos.style = estilos["botonDatosClaro"]
     }
 
     private fun comprobarCampos() {

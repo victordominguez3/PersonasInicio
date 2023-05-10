@@ -57,26 +57,35 @@
                <padding>
                   <Insets right="15.0" />
                </padding></Label>
-            <TextField fx:id="nombreField" onKeyReleased="#onModificarNombre" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1">
+            <TextField fx:id="nombreField" onKeyReleased="#onModificarNombre" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
-               </GridPane.margin></TextField>
-            <TextField fx:id="edadField" onKeyReleased="#onModificarEdad" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="edadField" onKeyReleased="#onModificarEdad" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
-               </GridPane.margin></TextField>
-            <TextField fx:id="correoField" onKeyReleased="#onModificarCorreo" style="-fx-background-color: #EEC2FF;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="correoField" onKeyReleased="#onModificarCorreo" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />
-               </GridPane.margin></TextField>
+               </GridPane.margin>
+               <font>
+                  <Font name="Consolas" size="12.0" />
+               </font></TextField>
          </children>
       </GridPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="286.0" spacing="20.0">
          <children>
             <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-accent: #F285FF; -fx-control-inner-background: #F9E9FF;" />
-            <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBorrarButtonClick" onMouseEntered="#onRatonEncimaBorrar" onMouseExited="#onRatonQuitadoBorrar" style="-fx-background-color: #FF9E9E;" text="Borrar" />
-            <Button fx:id="botonDatos" mnemonicParsing="false" onAction="#onDatosBotonClick" onMouseEntered="#onRatonEncimaDatos" onMouseExited="#onRatonQuitadoDatos" style="-fx-background-color: #99D1FF;" text="Datos" />
-            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #AAFF9E;" text="Guardar" />
+            <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBorrarButtonClick" onMouseEntered="#onRatonEncimaBorrar" onMouseExited="#onRatonQuitadoBorrar" style="-fx-background-color: #FF9E9E; -fx-background-radius: 10;" text="Borrar" />
+            <Button fx:id="botonDatos" mnemonicParsing="false" onAction="#onDatosBotonClick" onMouseEntered="#onRatonEncimaDatos" onMouseExited="#onRatonQuitadoDatos" style="-fx-background-color: #99D1FF; -fx-background-radius: 10;" text="Datos" />
+            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #AAFF9E; -fx-background-radius: 10;" text="Guardar" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
