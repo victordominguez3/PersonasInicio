@@ -41,9 +41,9 @@ class FormularioPersonasController() {
 
     private val repository = PersonasRepository()
     private val estilos: Map<String, String> = mapOf(
-        "fondoMoradoCampos" to "-fx-background-color: #EEC2FF; -fx-background-radius: 20;",
-        "fondoRojoCampos" to "-fx-background-color: #FFBCBC; -fx-background-radius: 20;",
-        "fondoVerdeCampos" to "-fx-background-color: #CCFFBC; -fx-background-radius: 20;",
+        "fondoMoradoCampos" to "-fx-background-color: #EEC2FF; -fx-background-radius: 20; -fx-background-insets: 3;",
+        "fondoRojoCampos" to "-fx-background-color: #FFBCBC; -fx-background-radius: 20; -fx-background-insets: 3;",
+        "fondoVerdeCampos" to "-fx-background-color: #CCFFBC; -fx-background-radius: 20; -fx-background-insets: 3;",
         "botonBorrarClaro" to "-fx-background-color: #FF9E9E; -fx-background-radius: 10;",
         "botonBorrarOscuro" to "-fx-background-color: #FF4747; -fx-background-radius: 10;",
         "botonDatosClaro" to "-fx-background-color: #99D1FF; -fx-background-radius: 10;",

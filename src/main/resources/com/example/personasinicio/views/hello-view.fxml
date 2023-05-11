@@ -58,21 +58,21 @@
                <padding>
                   <Insets right="15.0" />
                </padding></Label>
-            <TextField fx:id="nombreField" onKeyReleased="#onModificarNombre" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1">
+            <TextField fx:id="nombreField" onKeyReleased="#onModificarNombre" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20; -fx-background-insets: 3;" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
                <font>
                   <Font name="Consolas" size="13.0" />
                </font></TextField>
-            <TextField fx:id="edadField" onKeyReleased="#onModificarEdad" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="edadField" onKeyReleased="#onModificarEdad" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20; -fx-background-insets: 3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
                <font>
                   <Font name="Consolas" size="13.0" />
                </font></TextField>
-            <TextField fx:id="correoField" onKeyReleased="#onModificarCorreo" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="correoField" onKeyReleased="#onModificarCorreo" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20; -fx-background-insets: 3;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
@@ -101,7 +101,7 @@
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font></Button>
-            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #AAFF9E; -fx-background-radius: 10;" text="Guardar">
+            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #B7FFAD; -fx-background-radius: 10;" text="Guardar">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

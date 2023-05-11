@@ -29,7 +29,13 @@ class DatosController(datos: Array<String>) {
     @FXML
     private fun initialize() {
         campoNombre.text = datos[0]
-        campoEdad.text = datos[1] + " años"
+
+        campoEdad.text = if (datos[1].toIntOrNull() == null) {
+            datos[1]
+        } else if (datos[1].toIntOrNull() == 1) {
+            datos[1] + " año"
+        } else datos[1] + " años"
+
         campoCorreo.text = datos[2]
     }
 
