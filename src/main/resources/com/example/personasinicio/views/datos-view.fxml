@@ -11,21 +11,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="375.0" style="-fx-background-color: #FED3FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="375.0" style="-fx-background-color: #FEE4FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="57.0" prefWidth="279.0">
+      <HBox prefHeight="36.0" prefWidth="375.0">
          <children>
-            <Label alignment="CENTER" prefHeight="58.0" prefWidth="99.0" text="DATOS" textFill="#7c377e">
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="99.0" text="DATOS" textFill="#7c377e">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font>
                <HBox.margin>
-                  <Insets left="30.0" />
+                  <Insets left="30.0" top="5.0" />
                </HBox.margin>
             </Label>
             <ImageView fx:id="imagenBox" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
-                  <Insets left="150.0" top="5.0" />
+                  <Insets left="150.0" />
                </HBox.margin>
                <image>
                   <Image url="@../icons/usuario.png" />
@@ -36,71 +36,115 @@
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
-      <GridPane prefHeight="126.0" prefWidth="284.0">
+      <GridPane prefHeight="35.0" prefWidth="355.0" style="-fx-background-color: #EEC2FF; -fx-background-radius: 10;">
         <columnConstraints>
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="115.20001220703125" minWidth="10.0" prefWidth="75.20001220703125" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.6" minWidth="10.0" prefWidth="226.39998779296877" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="250.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
+         <VBox.margin>
+            <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
          <children>
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="63.0" style="-fx-border-color: #A547A7; -fx-border-insets: -5; -fx-border-radius: 5;" text="NOMBRE">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="67.0" text="NOMBRE">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Century Gothic" size="14.0" />
                </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="42.0" style="-fx-border-color: #A547A7; -fx-border-insets: -5; -fx-border-radius: 5;" text="EDAD" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets right="10.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
             </Label>
-            <Label alignment="CENTER" prefWidth="59.0" style="-fx-border-color: #A547A7; -fx-border-insets: -5; -fx-border-radius: 5;" text="CORREO" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets right="10.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="campoNombre" prefHeight="18.0" prefWidth="220.0" style="-fx-border-color: #A547A7; -fx-border-insets: -6; -fx-border-radius: 5;" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
+            <Label fx:id="campoNombre" prefHeight="18.0" prefWidth="220.0" style="-fx-border-color: #A547A7; -fx-border-insets: -2; -fx-border-radius: 5;" GridPane.columnIndex="1">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
-            </Label>
-            <Label fx:id="campoEdad" prefWidth="220.0" style="-fx-border-color: #A547A7; -fx-border-insets: -6; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="10.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="35.0" prefWidth="355.0" style="-fx-background-color: #EEC2FF; -fx-background-radius: 10;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="22.0" prefWidth="47.0" text=" EDAD">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="campoEdad" prefHeight="18.0" prefWidth="220.0" style="-fx-border-color: #A547A7; -fx-border-insets: -2; -fx-border-radius: 5;" GridPane.columnIndex="1">
                <font>
                   <Font name="Consolas" size="13.0" />
                </font>
-            </Label>
-            <Label fx:id="campoCorreo" prefWidth="220.0" style="-fx-border-color: #A547A7; -fx-border-insets: -6; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
                <GridPane.margin>
-                  <Insets left="10.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
-               <font>
-                  <Font name="Consolas" size="13.0" />
-               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
             </Label>
          </children>
          <VBox.margin>
-            <Insets left="20.0" right="20.0" />
+            <Insets bottom="10.0" left="15.0" right="15.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane prefHeight="35.0" prefWidth="355.0" style="-fx-background-color: #EEC2FF; -fx-background-radius: 10;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="22.0" prefWidth="66.0" text="CORREO">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="campoCorreo" prefHeight="18.0" prefWidth="220.0" style="-fx-border-color: #A547A7; -fx-border-insets: -2; -fx-border-radius: 5;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" />
          </VBox.margin>
       </GridPane>
    </children>

@@ -37,6 +37,7 @@ object RoutesManager {
         stage.title = "Datos del formulario"
         stage.scene = scene
         stage.isResizable = false
+        stage.icons.add(icono)
         stage.initOwner(mainStage)
         stage.initModality(Modality.WINDOW_MODAL)
         stage.show()

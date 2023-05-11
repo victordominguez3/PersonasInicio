@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
@@ -19,7 +20,7 @@
    <children>
       <Label text="PERSONAS" textFill="#72009c">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Century Gothic" size="18.0" />
          </font>
          <VBox.margin>
             <Insets bottom="10.0" />
@@ -38,21 +39,21 @@
          <children>
             <Label text="NOMBRE" textFill="#72009c">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Century Gothic" size="14.0" />
                </font>
                <padding>
                   <Insets right="15.0" />
                </padding></Label>
             <Label text="EDAD" textFill="#72009c" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Century Gothic" size="14.0" />
                </font>
                <padding>
-                  <Insets right="15.0" />
+                  <Insets right="35.0" />
                </padding></Label>
             <Label text="CORREO" textFill="#72009c" GridPane.rowIndex="2">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Century Gothic" size="14.0" />
                </font>
                <padding>
                   <Insets right="15.0" />
@@ -62,30 +63,51 @@
                   <Insets right="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="Consolas" size="12.0" />
+                  <Font name="Consolas" size="13.0" />
                </font></TextField>
             <TextField fx:id="edadField" onKeyReleased="#onModificarEdad" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="Consolas" size="12.0" />
+                  <Font name="Consolas" size="13.0" />
                </font></TextField>
             <TextField fx:id="correoField" onKeyReleased="#onModificarCorreo" style="-fx-background-color: #EEC2FF; -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="Consolas" size="12.0" />
+                  <Font name="Consolas" size="13.0" />
                </font></TextField>
          </children>
       </GridPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="286.0" spacing="20.0">
          <children>
-            <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-accent: #F285FF; -fx-control-inner-background: #F9E9FF;" />
-            <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBorrarButtonClick" onMouseEntered="#onRatonEncimaBorrar" onMouseExited="#onRatonQuitadoBorrar" style="-fx-background-color: #FF9E9E; -fx-background-radius: 10;" text="Borrar" />
-            <Button fx:id="botonDatos" mnemonicParsing="false" onAction="#onDatosBotonClick" onMouseEntered="#onRatonEncimaDatos" onMouseExited="#onRatonQuitadoDatos" style="-fx-background-color: #99D1FF; -fx-background-radius: 10;" text="Datos" />
-            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #AAFF9E; -fx-background-radius: 10;" text="Guardar" />
+            <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="175.0" progress="0.0" style="-fx-accent: #F285FF; -fx-control-inner-background: #F9E9FF;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></ProgressBar>
+            <Button fx:id="botonBorrar" mnemonicParsing="false" onAction="#onBorrarButtonClick" onMouseEntered="#onRatonEncimaBorrar" onMouseExited="#onRatonQuitadoBorrar" style="-fx-background-color: #FF9E9E; -fx-background-radius: 10;" text="Borrar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font></Button>
+            <Button fx:id="botonDatos" mnemonicParsing="false" onAction="#onDatosBotonClick" onMouseEntered="#onRatonEncimaDatos" onMouseExited="#onRatonQuitadoDatos" style="-fx-background-color: #99D1FF; -fx-background-radius: 10;" text="Datos">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font></Button>
+            <Button fx:id="botonGuardar" mnemonicParsing="false" onAction="#onGuardarButtonClick" onMouseEntered="#onRatonEncimaGuardar" onMouseExited="#onRatonQuitadoGuardar" style="-fx-background-color: #AAFF9E; -fx-background-radius: 10;" text="Guardar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font></Button>
          </children>
          <VBox.margin>
             <Insets top="10.0" />

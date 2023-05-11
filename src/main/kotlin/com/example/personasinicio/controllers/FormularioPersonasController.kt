@@ -130,7 +130,7 @@ class FormularioPersonasController() {
     @FXML
     private fun onModificarCorreo() {
         logger.debug { "Controller -> Correo introducido: ${correoField.text}" }
-        val correoRegex = Regex("^[\\w.]+@\\w+(.es|.com|.org)$")
+        val correoRegex = Regex("^[\\w.]+@\\w+(\\.es|\\.com|\\.org)$")
         if (correoField.text == "") { correoField.style = estilos["fondoMoradoCampos"] }
         else if (correoField.text.matches(correoRegex)) { correoField.style = estilos["fondoVerdeCampos"] }
         else correoField.style = estilos["fondoRojoCampos"]

@@ -11,7 +11,7 @@ import mu.KotlinLogging
 private val logger = KotlinLogging.logger{}
 private val nombreRegex = Regex("^([a-zA-Z]+ *)+")
 private val edadRegex = Regex("^\\d+$")
-private val correoRegex = Regex("^[\\w.]+@\\w+(.es|.com|.org)$")
+private val correoRegex = Regex("^[\\w.]+@\\w+(\\.es|\\.com|\\.org)$")
 
 fun PersonaDto.validar(): Result<PersonaDto, PersonaError> {
     logger.debug { "Validando persona -> $this" }
